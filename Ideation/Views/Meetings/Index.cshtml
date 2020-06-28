@@ -29,7 +29,8 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.ActionLink("See all Ideas", "Ideas", new { id=item.Id }) 
+            @Html.ActionLink("See all Ideas", "Ideas", new { id = item.Id }) |
+            @Html.ActionLink("Edit Status", "Edit", new { id = item.Id })
         </td>
     </tr>
 }
