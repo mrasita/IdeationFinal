@@ -6,7 +6,7 @@
 <div>
     <h3>@ViewBag.MeetingName Meeting</h3>
     <h4>@ViewBag.MeetingOwner</h4>
-    <h5>@ViewBag.success</h5>
+    <h5>@ViewBag.success </h5>
 </div>
 
 
@@ -25,19 +25,28 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Idea, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Idea, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.Idea, new { htmlAttributes = new { @class = "form-control", size = "130" } })
             @Html.ValidationMessageFor(model => model.Idea, "", new { @class = "text-danger" })
 
         </div>
     </div>
 
-    <input id="MeetingId"  name="MeetingId"
+    @if (ViewBag.success != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.success");
+            };
+        </script>
+    }
+
+    <input id="MeetingId" name="MeetingId"
            type="hidden"
            value="@ViewBag.MeetingId" />
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Send Idea" class="btn btn-default" />
+            <input type="submit" onclick="alert('Idea created for meeting')" value="Send Idea" class="btn btn-default" />
         </div>
     </div>
 </div>

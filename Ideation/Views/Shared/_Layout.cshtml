@@ -1,6 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
@@ -22,11 +25,11 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Join a Meeting", "Index", "Home")</li>
                     <li>@Html.ActionLink("Create a Meeting", "Create", "Meetings")</li>
-                    <li>@Html.ActionLink("Meetings", "Index", "Meetings")</li>  
+                    <li>@Html.ActionLink("Meetings", "Index", "Meetings")</li>
 
                     @if (Request.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink(HttpContext.Current.User.Identity.Name, "YourIdeas", "Ideas" )</li>
+                        <li>@Html.ActionLink(HttpContext.Current.User.Identity.Name, "YourIdeas", "Ideas")</li>
                         <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
                     }
                 </ul>
@@ -43,6 +46,13 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
     @RenderSection("scripts", required: false)
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js%22%3E"> </script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js%22%3E"> </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js%22%3E"> </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js%22%"></script>
+    <script src="https://kit.fontawesome.com/e19c476714.js%22%3E"> </script>
+
 </body>
 </html>

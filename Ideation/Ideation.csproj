@@ -333,11 +333,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Ideas\Create.cshtml" />
     <Content Include="Views\Ideas\Delete.cshtml" />
-    <Content Include="Views\Ideas\Details.cshtml" />
     <Content Include="Views\Ideas\Edit.cshtml" />
-    <Content Include="Views\Ideas\Index.cshtml" />
     <Content Include="Views\Meetings\Create.cshtml" />
     <Content Include="Views\Meetings\Delete.cshtml" />
     <Content Include="Views\Meetings\Details.cshtml" />
