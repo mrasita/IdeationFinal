@@ -71,7 +71,6 @@ namespace Ideation.Controllers
             ViewBag.MeetingName = meeting.Name;
             ViewBag.MeetingId = meeting.Id;
             ViewBag.MeetingOwner = meeting.Owner;
-
             return View(ideaCreate);
         }
 
@@ -84,7 +83,6 @@ namespace Ideation.Controllers
             idea.Owner = db.Users.Single(x => x.Username == HttpContext.User.Identity.Name);
             db.Ideas.Add(idea);
             db.SaveChanges();
-            ViewBag.success = "Idea created for meeting ";
             return RedirectToAction("Meeting",ideaCreate.MeetingId);
         }
 
